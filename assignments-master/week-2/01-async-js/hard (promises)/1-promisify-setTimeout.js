@@ -9,5 +9,4 @@ function wait(n) {
         },n*1000)
      })
 }
-
 module.exports = wait;
