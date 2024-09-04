@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const adminMiddleware = require("../middleware/admin");
-const { Admin } = require("../db");
-const { create } = require("ts-node");
+const { Admin ,Course} = require("../db");
 const router = Router();
 
 // Admin Routes
@@ -10,11 +9,15 @@ router.post('/signup', async (req, res) => {
     const username= req.body.username;
     const password = req.body.password;
 
+
+     console.log(username,password);
     //check if a user with this username is already exist
-    await Admin,create({
+ const user=   await Admin.create({
         username:username,
         password:password
     })
+
+    console.log(user)
     res.json({
         message:"Admin created Successfully"
     })
