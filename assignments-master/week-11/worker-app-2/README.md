@@ -21,7 +21,7 @@ Actions: Create a new blog post associated with the authenticated user. Require 
 
  - GET /posts/:id - Retrieve a single blog post by ID.
 Actions: Fetch details of a specific blog post. Can be public or have additional details/edit capabilities for the owner.
-
+  
  - PUT /posts/:id - Update a blog post by ID.
 Inputs: title, body, tags (array of string)
 Actions: Update the specified blog post if the authenticated user is the owner. Require authentication.
